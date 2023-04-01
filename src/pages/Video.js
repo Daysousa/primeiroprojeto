@@ -1,9 +1,10 @@
 import React, { useRef, useState } from "react";
 import VideoFooter from "./components/footer/VideoFooter";
 import "./video.css";
+import VideoSidebar from "./components/sidebar/VideoSidebar";
 
-// Função responsável por dar start e pausar o vídeo selecionado.
-function Video() {
+
+function Video({likes,menssages,shares,name,description,music, url }) {
   const videoRef = useRef(null);
   const [play, setPlay] = useState(false);
 
@@ -24,10 +25,22 @@ function Video() {
         ref={videoRef}
         onClick={handdleStart}
         loop
-        src="https://poqlymuephttfsljdabn.supabase.co/storage/v1/object/public/jornadadev/brecker2.mp4"
+        src={url}
       ></video>
-      { /* Side bar */ }
-      <VideoFooter />
+      <VideoSidebar 
+        likes={likes}
+        menssages={menssages}
+        shares={shares}
+      
+      
+      />
+      <VideoFooter 
+        name={name}
+        description={description}
+        music={music}
+      
+      
+      />
     </div>
   );
 }

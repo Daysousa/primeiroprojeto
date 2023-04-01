@@ -30,11 +30,6 @@
 .videoFooterMusic_text{
     width: 80%;
     overflow-x: hidden;
-    
-   
-    
-
-
 }
 .videoFooterMusic_text p{
     animation: moveTheText 3s infinite linear;
@@ -79,7 +74,4 @@
         transform: translateX(-100%);
 
     }
-
-
-
 }
